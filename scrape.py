@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import lxml
 
 #Open the Website and use GET-function to scrape information + convert it into text
-link=input("Please enter Link: ")
+link=input("Please enter Link (if hyperlinks are enabled in your console, please add a space before typing enter): ")
 link=link.rstrip()
 try:
     source = requests.get(link).text
