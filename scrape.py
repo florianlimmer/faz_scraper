@@ -73,6 +73,7 @@ print("Titel des Artikels:",headline,"\n"
       "Sätze:", sen_count,"\n"
       "Wörter:", word_count)
 
+#Ask if a .txt-file should be created
 q1=input("Would you like to create a new .txt-file? (y/n): ")
 
 if q1 == "y":
