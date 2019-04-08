@@ -45,7 +45,7 @@ for satz in sätze:
 #split for words
 wörter=list.split()
 
-#count  words
+#count words
 for wort in wörter:
     word_count=word_count+1
 
