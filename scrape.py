@@ -10,7 +10,7 @@ link=link.rstrip()
 try:
     source = requests.get(link).text
 except:
-    print("This link is not correct.")
+    print("This link is not correct."  )
     quit()
 
 #Create a Soup-Object with the lxml-parser active
