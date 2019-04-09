@@ -9,8 +9,10 @@ link=input("Please enter Link (if hyperlinks are enabled in your console, please
 link=link.rstrip()
 try:
     source = requests.get(link).text
+
 except:
-    print("This link is not correct."  )
+
+    print("This link is not correct or you are not connected to the internet.")
     quit()
 
 #Create a Soup-Object with the lxml-parser active
@@ -78,18 +80,15 @@ q1=input("Would you like to create a new .txt-file? (y/n): ")
 
 if q1 == "y":
 
-    file=open(headline+".txt","w+")
-    file.write("Title: " + headline + "\n")
-    file.write("Author: " + author +"\n")
-    file.write("Paragraphs: " + str(par_count) + "\n")
-    file.write("Sentences: " + str(sen_count) + "\n")
-    file.write("Words: " + str(word_count) + "\n")
-    file.write(text + "\n")
+    file=io.open(headline+".txt","w", encoding="utf-8")
+    file.write('Title: {}\n'
+               'Author: {}\n'
+               'Paragraphs: {}\n'
+               'Sentences: {}\n'
+               'Words: {}\n'
+               '{}'.format(headline, author, par_count, sen_count, word_count, text))
     file.close()
     print("File written.")
 else:
     print("No file written.")
 
-
-    #Formatfunktion anstatt write
-    "{}{}{}".format(a1, a2, a3)
