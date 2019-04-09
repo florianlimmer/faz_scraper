@@ -89,3 +89,7 @@ if q1 == "y":
     print("File written.")
 else:
     print("No file written.")
+
+
+    #Formatfunktion anstatt write
+    "{}{}{}".format(a1, a2, a3)
